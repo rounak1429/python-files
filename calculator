@@ -1,0 +1,17 @@
+#calculator
+a = int(input("enter 1st value: "))
+z = (input("type + for add \n type - for subtract \n type * for multiply \n type / for devide"))
+b = int(input("enter 2nd value: "))
+
+if (z=="+") :
+        print(a+b)
+elif (z=="-") :
+        print(a-b)
+elif (z=="*") :
+        print(a*b)
+elif (z=="/"):
+        print(a/b)
+else:
+    print("enter right operator")
+        
+        
