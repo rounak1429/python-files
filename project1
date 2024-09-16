@@ -1,0 +1,29 @@
+# MAKE A MINI PROJECT IN WHICH TAKING THE INPUT FROM THE USER FOR START POINT, END POINT, UPDATION AND PRINT THE NUMBERS 
+# EITHER IN REVERSE ORDER OR FORWARD ORDER IN HORIZONTAL OR VERTICAL
+s = int(input("give start point: "))
+e = int(input("give end point: "))
+u = int(input("give updation: "))
+a = input("horizontal or vertical: ")
+y = input("forward or backward: ")
+if(y=='forward'):
+    for i in range(s,e+1,u):
+      if(a=='h'):
+           for i in range(s,e+1,u):
+             print(i,end=" ")
+      elif(a=='v'):
+           for i in range(s,e+1,u):
+             print(i)
+      else:
+          print("wrong input")
+elif(y=='backward'):
+    
+      if(a=='h'):
+          for i in range(e,s-1,-u):
+             print(i,end=" ")
+      elif(a=='v'): 
+          for i in range(e,s-1,-u):
+             print(i)
+      else:
+          print("wrong input")     
+else:
+          print("wrong input")
