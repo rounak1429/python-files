@@ -1,0 +1,8 @@
+#programe to print sum of numbers
+s = int(input("give start point: "))
+e = int(input("give end point: "))
+u = int(input("give updation"))
+sum = 0
+for i in range(s,e+1,u):
+    sum+=i
+print(sum,end=" ")
