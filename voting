@@ -1,17 +1,133 @@
-age = int(input("enter your age"))
-if(age>=18):
-    print("you are eligible to vote")
-    vote = int(input("press 1 for CONGRESS:\n press 2 for BJP:\n press 3 for AAP:\n press 4 for JMM:\n press 5 for NONE:\n" ))
-    if(vote==1):
-        print("thank you for voting CONGRESS")
-    elif(vote==2):
-        print("thank you for voting to BJP")
-    elif(vote==3):
-        print("thank you for voting to AAP")
-    elif(vote==4):
-        print("thank you for voting to JMM")
+count1=0
+count2=0
+count3=0
+n = int(input("HOW MUCH VOTE DO YOU WANT TO TAKE: "))
+total=0
+while(n>total):
+  age = int(input("enter your age : "))
+  if(age>=18):
+        print("you are eligible to vote")
+        vote = int(input("press 1 for CONGRESS:\npress 2 for BJP:\npress 3 for AAP:\n" ))
+        
+        if(vote==1):
+            print("thank you for voting CONGRESS")
+            count1+=1    
+        elif(vote==2):
+            print("thank you for voting to BJP")
+            count2+=1
+        elif(vote==3):
+            print("thank you for voting to AAP") 
+            count3+=1 
+        else:
+            print("you have voted to none") 
+        total+=1    
+              
+  else:
+      print("you are not eligible to vote")
+      
+print("congress = ",count1)
+print("BJP = ",count2)
+print("AAP = ",count3)
+if(count1>count2 and count1>count3):
+    print("CONGRESS IS THE WINNER")
+elif(count2>count1 and count2>count3):
+    print("BJP IS THE WINNER")
+elif(count3>count1 and count3>count2):
+    print("AAP IS THE WINNER")
+elif(count1==count2==count3):
+    print("ELECTION IS TIED BETWEEN CONGRESS , BJP AND AAP\n\nDESICION MAKING VOTING IS GOING TO START : \n")
+    age = int(input("enter your age : "))
+    if(age>=18):
+        print("you are eligible to vote")
+        vote = int(input("press 1 for CONGRESS:\npress 2 for BJP:\npress 3 for AAP:\n" )) 
+        if(vote==1):
+            count1+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("CONGRESS IS THE WINNER")
+        elif(vote==2):
+            count2+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("BJP IS THE WINNER")
+        elif(vote==3):
+            count3+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("AAP IS THE WINNER") 
+        else:
+            print("you have voted to none")  
     else:
-        print("you have voted none")
+        print("you are not eligible to vote")            
+elif(count1==count2):
+    print("ELECTION IS TIED BETWEEN CONGRESS AND BJP\n\nDESICION MAKING VOTING IS GOING TO START : \n")
+    
+    age = int(input("enter your age : "))
+    if(age>=18):
+        print("you are eligible to vote")
+        vote = int(input("press 1 for CONGRESS:\npress 2 for BJP:\n"))
+        if(vote==1):
+            count1+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("CONGRESS IS THE WINNER")
+        elif(vote==2):
+            count2+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("BJP IS WINNER")    
+        else:
+            print("you have voted to none")    
+elif(count2==count3):
+    print("ELECTION IS TIED BETWEEN BJP AND AAP\n\nDESICION MAKING VOTING IS GOING TO START : \n")
+    age = int(input("enter your age : "))
+    if(age>=18):
+        print("you are eligible to vote")
+        vote = int(input("press 2 for BJP:\n press 3 for AAP:\n" ))
+        if(vote==2):
+            count2+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("BJP IS WINNER")
+        elif(vote==3):
+            count3+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("AAP IS WINNER")
+        else:
+            print("you have voted to none")  
+    else:
+        print("you are not eligible to vote")            
+elif(count3==count1):
+    print("ELECTION IS TIED BETWEEN CONGRESS AND AAP\n\nDESICION MAKING VOTING IS GOING TO START : \n")
+    age = int(input("enter your age : "))
+    if(age>=18):
+        print("you are eligible to vote")
+        vote = int(input("press 1 for CONGRESS:\npress 3 for AAP:\n" ))
+        if(vote==1):
+            count1+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("CONGRESS IS THE WINNER")
+        elif(vote==3):
+            count3+=1
+            print("congress = ",count1)
+            print("BJP = ",count2)
+            print("AAP = ",count3)
+            print("AAP IS THE WINNER")    
+        else:
+            print("you have voted to none")
+    else:
+        print("you are not eligible to vote")  
 else:
-    print("you are not eligible to vote")
+    print("NA")              
+            
     
